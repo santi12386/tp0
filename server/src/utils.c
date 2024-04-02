@@ -22,7 +22,7 @@ int iniciar_servidor(void)
 		servinfo->ai_protocol);
 
 	// Asociamos el socket a un puerto
-	bind(socket_servidor, servinfo->ai_addr, servinfo->ai_addrlen)
+	bind(socket_servidor, servinfo->ai_addr, servinfo->ai_addrlen);
 
 	// Escuchamos las conexiones entrantes
 	listen(socket_servidor, SOMAXCONN);
@@ -36,7 +36,6 @@ int iniciar_servidor(void)
 int esperar_cliente(int socket_servidor)
 {
 	// Aceptamos un nuevo cliente
-	int socket_cliente;
 	int socket_cliente = accept(socket_servidor, NULL, NULL);
 	log_info(logger, "Se conecto un cliente!");
 
