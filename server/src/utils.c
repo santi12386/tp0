@@ -13,7 +13,7 @@ int iniciar_servidor(void)
 	hints.ai_socktype = SOCK_STREAM;
 	hints.ai_flags = AI_PASSIVE;
 
-	getaddrinfo(NULL, "25565", &hints, &servinfo);
+	getaddrinfo(NULL, "3737", &hints, &servinfo);
 
 	// Creamos el socket de escucha del servidor
 	socket_servidor = socket(
